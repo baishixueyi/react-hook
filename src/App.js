@@ -22,6 +22,8 @@ function useState(initialValue) {
 }
 
 function useEffect(callback, depArray) {
+
+    console.log('useffect'+cursor)
     const hasNoDeps = !depArray;
     const deps = memoizedState[cursor]
     const hasChangeDeps = deps ? !depArray.every((el, i) => el === deps[i]) : true;
